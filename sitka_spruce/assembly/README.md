@@ -8,8 +8,6 @@
 Configure file paths in the bash script `run.sh` for each assembly method and run:
 
 ```
-bash rnabloom2/run_ont.sh
-bash rnabloom2/run_hybrid.sh
-bash rattle/run.sh
+bash run.sh
 ```
 
