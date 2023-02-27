@@ -1,9 +1,9 @@
 set -euo pipefail
 
 # set up paths
-ont_cdna_reads=../../lrgasp_replicates/data/{ENCFF232YSU,ENCFF288PBL,ENCFF683TBO}_pychopper_fulllength_rescued.fastq
-ont_drna_reads=../../lrgasp_replicates/data/{ENCFF349BIN,ENCFF412NKJ,ENCFF765AEC}.fastq
-pacbio_ccs_reads=../../lrgasp_replicates/data/{ENCFF313VYZ,ENCFF667VXS,ENCFF874VSI}.fastq
+ont_cdna_reads=../../data/{ENCFF232YSU,ENCFF288PBL,ENCFF683TBO}_pychopper_fulllength_rescued.fastq
+ont_drna_reads=../../data/{ENCFF349BIN,ENCFF412NKJ,ENCFF765AEC}.fastq
+pacbio_ccs_reads=../../data/{ENCFF313VYZ,ENCFF667VXS,ENCFF874VSI}.fastq
 reference_genome_fasta=/path/to/lrgasp_grcm39_sirvs.fasta
 reference_annotation_gtf=/path/to/lrgasp_gencode_vM27_sirvs.gtf
 
@@ -19,7 +19,7 @@ topdir=${PWD}
 for replicate in ENCFF232YSU ENCFF288PBL ENCFF683TBO
 do
   cd ${topdir}
-  reads=$(realpath ../../lrgasp_replicates/data/${replicate}_pychopper_fulllength_rescued.fastq)
+  reads=$(realpath ../../data/${replicate}_pychopper_fulllength_rescued.fastq)
 
   outdir=${topdir}/${replicate}
   mkdir -p ${outdir}
@@ -40,7 +40,7 @@ done
 for replicate in ENCFF349BIN ENCFF412NKJ ENCFF765AEC
 do
   cd ${topdir}
-  reads=$(realpath ../../lrgasp_replicates/data/${replicate}.fastq)
+  reads=$(realpath ../../data/${replicate}.fastq)
 
   outdir=${topdir}/${replicate}
   mkdir -p ${outdir}
@@ -61,7 +61,7 @@ done
 for replicate in ENCFF313VYZ ENCFF667VXS ENCFF874VSI
 do
   cd ${topdir}
-  reads=$(realpath ../../lrgasp_replicates/data/${replicate}.fastq)
+  reads=$(realpath ../../data/${replicate}.fastq)
 
   outdir=${topdir}/${replicate}
   mkdir -p ${outdir}
