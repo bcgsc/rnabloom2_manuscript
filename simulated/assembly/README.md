@@ -15,10 +15,6 @@
 Configure file paths in the bash script `run.sh` for each assembly method and run:
 
 ```
-bash rnabloom2/run.sh
-bash rattle/run.sh
-bash flair/run.sh
-bash stringtie2/run.sh
-bash stringtie2_gtf/run.sh
+bash run.sh
 ```
 
